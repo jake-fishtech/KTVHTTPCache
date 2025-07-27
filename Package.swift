@@ -16,13 +16,16 @@ let package = Package(
             sources: [
                 "Classes",
                 "CocoaHTTPServer",
-                "Vendors"
+                "Vendors",
+                "Vendors/DDKit"
             ],
             publicHeadersPath: "Classes",
             cSettings: [
                 .headerSearchPath("Classes"),
                 .headerSearchPath("CocoaHTTPServer"),
                 .headerSearchPath("Vendors"),
+                .headerSearchPath("Vendors/CocoaAsyncSocket"),
+                .headerSearchPath("Vendors/DDKit")
             ]
         )
     ]
