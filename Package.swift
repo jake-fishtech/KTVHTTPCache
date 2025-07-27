@@ -13,11 +13,16 @@ let package = Package(
         .target(
             name: "KTVHTTPCache",
             path: "KTVHTTPCache",
-            sources: ["Classes", "CocoaHTTPServer"],
-            publicHeadersPath: "Classes", // public headers should live here
+            sources: [
+                "Classes",
+                "CocoaHTTPServer",
+                "Vendors"
+            ],
+            publicHeadersPath: "Classes",
             cSettings: [
                 .headerSearchPath("Classes"),
-                .headerSearchPath("CocoaHTTPServer")
+                .headerSearchPath("CocoaHTTPServer"),
+                .headerSearchPath("Vendors")
             ]
         )
     ]
