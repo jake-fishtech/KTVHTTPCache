@@ -1,10 +1,3 @@
-//
-//  Package.swift
-//  
-//
-//  Created by Jake Fishman on 7/27/25.
-//
-
 // swift-tools-version:5.9
 import PackageDescription
 
@@ -20,9 +13,11 @@ let package = Package(
         .target(
             name: "KTVHTTPCache",
             path: "KTVHTTPCache",
-            publicHeadersPath: ".",
+            sources: ["Classes", "CocoaHTTPServer"],
+            publicHeadersPath: "Classes", // public headers should live here
             cSettings: [
-                .headerSearchPath(".")
+                .headerSearchPath("Classes"),
+                .headerSearchPath("CocoaHTTPServer")
             ]
         )
     ]
