@@ -22,7 +22,7 @@ let package = Package(
             cSettings: [
                 .headerSearchPath("Classes"),
                 .headerSearchPath("CocoaHTTPServer"),
-                .headerSearchPath("Vendors")
+                .headerSearchPath("Vendors"),
             ]
         )
     ]
