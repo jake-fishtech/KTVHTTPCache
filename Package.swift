@@ -3,9 +3,7 @@ import PackageDescription
 
 let package = Package(
     name: "KTVHTTPCache",
-    platforms: [
-        .iOS(.v13)
-    ],
+    platforms: [.iOS(.v13)],
     products: [
         .library(name: "KTVHTTPCache", targets: ["KTVHTTPCache"]),
     ],
@@ -21,7 +19,8 @@ let package = Package(
             publicHeadersPath: "Classes",
             cSettings: [
                 .headerSearchPath("Classes"),
-                .headerSearchPath("CocoaHTTPServer"),
+                .headerSearchPath("CocoaHTTPServer/Core"),          // new
+                .headerSearchPath("CocoaHTTPServer/Core/**"),       // new (recursive)
                 .headerSearchPath("Vendors")
             ]
         )
